@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="./js/angular.min.js"></script>
+	</head>
+	<body>
+		
+		
+		<!--<div ng-app='' ng-init="quantity=10;cost=20" >
+			
+			<span> {{ quantity * cost }} </span>
+			
+			<p ng-bind='{{ quantity * cost }}' ></p>
+			
+		</div>-->
+		
+		<!--<div ng-app='' ng-init="person={name:'arvin',sex:'男'}">
+			
+			<span> {{ person.name }} </span>
+			
+			<p><span ng-bind="person.sex"></span></p>
+			
+		</div>-->
+		
+		<div ng-app='' ng-init='emp=["apple", "google", "tencent"]'>
+			
+			<p><span> {{ emp[1] }} </span></p>
+			
+			<p><span ng-bind='emp[0]'></span></p>
+			
+		</div>
+		
+		
+	</body>
+</html>
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	ng-init 用于初始化angular模块 不过这种默认的参数传递不太常用 也可以直接传递对象类型 类似于上面的person以及emp
+ 	ng-bind 用于将数据绑定到当前的HTML标签上面 效果等同于直接写表达式
+ 	
+-->

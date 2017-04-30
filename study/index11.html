@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<div ng-app='myApp' ng-controller='myController'>
+			
+			<button ng-click='toggle()'> 显示/隐藏 </button>
+			
+			<div ng-hide='myshow'>
+				<p>
+					姓名：
+					<span> {{ name }} </span>
+				</p>
+				
+				<p>
+					性别：
+					<select name="gender">
+						<option ng-repeat='gender in genders'>
+							{{ gender }}
+						</option>
+					</select>
+				</p>
+			</div>
+			
+		</div>
+		
+		
+		
+	</body>
+	
+	
+	<script type="text/javascript">
+		
+		angular.module('myApp', []).controller('myController', function($scope){
+			
+			$scope.name = 'arvin';
+			$scope.genders = ['男', '女'];
+			$scope.toggle = function(){
+				$scope.myshow = !$scope.myshow;
+			}
+			
+		});
+		
+	</script>
+	
+</html>

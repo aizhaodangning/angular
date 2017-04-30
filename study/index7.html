@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<form ng-app='myApp' ng-controller='myController' name="myForm">
+			
+			<input type="email" name='email' value="" ng-model='myText' />
+			
+			<h1> vaild {{ myForm.email.$valid }} </h1>
+			<h2> dirty {{ myForm.email.$dirty }} </h2>
+			<h3> touched {{ myForm.email.$touched }} </h3>
+			
+		</form>
+		
+		
+		
+	</body>
+	
+	<script type="text/javascript">
+		
+		angular.module('myApp', []).controller('myController', function($scope){
+			
+			$scope.myText = '523453428@qq.com';
+			
+		});
+		
+		
+	</script>
+	
+	
+</html>
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	ng-model 指令可以为应用数据提供状态值(invalid, dirty, touched, error):
+	
+	$dirty  	     表单有填写记录
+	$valid       	字段内容是合法的
+	$invalid     字段内容是非法的
+	$pristine	表单没有填写记录
+	
+	
+-->

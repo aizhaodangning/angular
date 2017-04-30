@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<div ng-app='myApp' ng-controller='myController'>
+			
+			姓名:
+			<p> {{ name }} </p>
+			<button ng-click='clickMe(name)'></button>
+			
+		</div>
+		
+		
+	</body>
+	
+	<script type="text/javascript">
+		
+		angular.module('myApp', []).controller('myController', function($scope){
+			
+			$scope.name = 'arvin';
+			
+			$scope.clickMe = function(index){
+				alert(index);
+			}
+		});
+		
+	</script>
+	
+</html>
+
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	所有的应用都有一个$rootscope, 他可以作用与ng-app包含的html中 $rootscope 可以作用于整个app中 是各个controller中scope的桥梁
+	用rootscope定义在值可以在各个controller中任意使用
+	
+-->

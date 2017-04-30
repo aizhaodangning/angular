@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<div ng-app="" ng-init="emps=['apple', 'google', 'tencent', 'alibaba']">
+			
+			
+			<ul>
+				<li ng-repeat='emp in emps'>
+					{{ emp }}
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+		
+	</body>
+</html>
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	ng-repeat 指令用在一个对象数组上 会重复一个HTML标签 
+	类比React:
+		React会自动遍历数组 angular 需要通过ng-repeat进行遍历 
+-->

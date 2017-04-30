@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="./js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<div ng-app="myApp" ng-controller="myController">
+			
+			<p> 姓名: <input type="text" ng-model="name"  /> </p>
+			<p> 性别: <input type="text" ng-model="gender"  /> </p>
+			<p> 年龄: <input type="text" ng-model="age"  /> </p>
+			
+			<h1> {{ '我是' + name + '、' + gender + ' ' + age }} </h1>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+			var app = angular.module('myApp', []);
+			app.controller('myController', function($scope) {
+			    $scope.name = "arvin";
+			    $scope.gender = "男";
+			    $scope.age = 25;
+			});
+			
+	</script>
+</html>
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	angular moudle定义了angular应用
+	 angular controller 顾名思义 控制angular应用逻辑
+	 
+	 app.controller 会将当前的作用域返回给controller 
+-->

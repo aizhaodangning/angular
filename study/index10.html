@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<div ng-app='myApp' ng-controller='myController'>
+			
+		</div>
+		
+		
+	</body>
+	
+	<script type="text/javascript">
+		
+		angular.module('myApp', []).controller('myController', function($scope, $location){
+			
+			alert($location.absUrl());
+			console.log($location);
+		});
+		
+	</script>
+	
+</html>
+
+<!--
+	作者：523453428@qq.com
+	时间：2017-04-30
+	描述：
+	
+	关于angular中的服务
+		在angular中 服务是一个对象或者函数  可以在angular应用中使用 
+		angular中内置了30多个服务
+		比如$location可以返回当前页面的url
+		注意：
+			服务是作为参数传递到controller中的  如果要使用它需要在controller中作为参数传递进来 
+			这个类似于spring的依赖注入
+	
+-->
+
+
